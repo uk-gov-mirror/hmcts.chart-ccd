@@ -11,8 +11,8 @@ keywords:
   - case-data-management
 dependencies:
   - name: rpe-service-auth-provider
-    version: 0.3.113
-    repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
+    version: 0.3.125
+    repository: 'oci://hmctspublic.azurecr.io/helm'
     condition: ccd.s2s.enabled
 
   - name: ccd-user-profile-api
@@ -41,13 +41,13 @@ dependencies:
     condition: ccd.adminWeb.enabled
 
   - name: draft-store-service
-    version: 2.2.5
-    repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
+    version: 2.2.6
+    repository: 'oci://hmctspublic.azurecr.io/helm'
     condition: ccd.draftStore.enabled
 
   - name: dm-store
-    version: 2.2.24
-    repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
+    version: 2.3.4
+    repository: 'oci://hmctspublic.azurecr.io/helm'
     condition: ccd.dmStore.enabled
 
   - name: ccd-case-print-service
@@ -67,22 +67,22 @@ dependencies:
 
   - name: ccd-definition-importer
     version: 1.4.0
-    repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
+    repository: 'oci://hmctspublic.azurecr.io/helm'
     condition: ccd.definitionImporter.enabled
 
   - name: ccd-user-profile-importer
     version: 1.2.2
-    repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
+    repository: 'oci://hmctspublic.azurecr.io/helm'
     condition: ccd.userProfileImporter.enabled
 
   - name: blobstorage
     version: 0.3.0
-    repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
+    repository: 'oci://hmctspublic.azurecr.io/helm'
     condition: ccd.blobstorage.enabled
 
   - name: em-anno
-    version: 2.0.22
-    repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
+    version: 2.1.0
+    repository: 'oci://hmctspublic.azurecr.io/helm'
     condition: ccd.emAnnotation.enabled
 
   - name: elasticsearch
@@ -96,15 +96,15 @@ dependencies:
     condition: ccd.elastic.enabled
 
   - name: am-role-assignment-service
-    version: 0.0.80
-    repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
+    version: 0.0.83
+    repository: 'oci://hmctspublic.azurecr.io/helm'
     condition: ccd.ras.enabled
-  
+
   - name: ccd-message-publisher
     version: 0.1.22
     repository: 'oci://hmctspublic.azurecr.io/helm'
     condition: ccd.mps.enabled
-  
+
   - name: postgresql
     version: 1.1.0
     repository: 'oci://hmctspublic.azurecr.io/helm'
